@@ -14,14 +14,14 @@ class StringEnum extends ScalarEnum implements StringInterface
     const STRING_ENUM = 'string_enum';
 
     /**
-     * @param bool|float|int|string|null|object $enumValue
+     * @param bool|float|int|string|object $enumValue
      *
      * @return string
      */
     protected static function convertToEnumFinalValue($enumValue)
     {
         try {
-            return ToString::toString($enumValue);
+            return ToString::toString($enumValue, true /* strict */);
         } catch (\Granam\Scalar\Tools\Exceptions\WrongParameterType $exception) {
             throw new Exceptions\UnexpectedValueToEnum($exception->getMessage(), $exception->getCode(), $exception);
         }

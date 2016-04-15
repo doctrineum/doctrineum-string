@@ -16,4 +16,14 @@ class StringEnumTest extends \PHPUnit_Framework_TestCase
         self::assertSame($value, $stringEnum->getValue());
         self::assertInstanceOf(StringInterface::class, $stringEnum);
     }
+
+    /**
+     * @test
+     * @expectedException \Doctrineum\String\Exceptions\UnexpectedValueToEnum
+     * @expectedExceptionMessageRegExp ~got NULL$~
+     */
+    public function I_can_not_use_null()
+    {
+        StringEnum::getEnum(null);
+    }
 }
