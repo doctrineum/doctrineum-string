@@ -2,11 +2,9 @@
 namespace Doctrineum\String;
 
 use Doctrineum\Scalar\ScalarEnumType;
-use Granam\Strict\Object\StrictObjectTrait;
 
 class StringEnumType extends ScalarEnumType
 {
-    use StrictObjectTrait;
 
     /**
      * Its not directly used this library - the exactly same value is generated and used by
@@ -14,6 +12,14 @@ class StringEnumType extends ScalarEnumType
      *
      * This constant exists to follow Doctrine type conventions.
      */
-    const STRING_ENUM = StringEnum::STRING_ENUM;
+    const STRING_ENUM = 'string_enum';
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return self::STRING_ENUM;
+    }
 
 }
