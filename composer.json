@@ -4,7 +4,7 @@
   "description": "String-only enumeration type and value dependent sub-type for Doctrine",
   "keywords": [
     "enum",
-    "sting",
+    "string",
     "sub-type",
     "value-dependent enum",
     "self-typed enum",
@@ -26,7 +26,6 @@
   },
   "require": {
     "php": ">=5.5",
-    "roave/security-advisories": "dev-master",
     "granam/string": "dev-master",
     "doctrineum/scalar": "dev-master"
   },
