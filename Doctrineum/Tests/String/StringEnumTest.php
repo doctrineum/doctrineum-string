@@ -12,7 +12,7 @@ class StringEnumTest extends \PHPUnit_Framework_TestCase
     public function I_can_use_it()
     {
         $stringEnum = StringEnum::getEnum($value = 'foo');
-        self::assertInstanceOf(StringEnum::getClass(), $stringEnum);
+        self::assertInstanceOf(StringEnum::class, $stringEnum);
         self::assertSame($value, $stringEnum->getValue());
         self::assertInstanceOf(StringInterface::class, $stringEnum);
     }
