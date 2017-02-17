@@ -1,15 +1,21 @@
 <?php
 namespace Doctrineum\Tests\String;
 
-use Granam\Tests\Exceptions\Tools\AbstractExceptionsHierarchyTest;
+use Granam\Tests\ExceptionsHierarchy\Exceptions\AbstractExceptionsHierarchyTest;
 
-class ExceptionsHierarchyTest extends AbstractExceptionsHierarchyTest
+class DoctrineumStringExceptionsHierarchyTest extends AbstractExceptionsHierarchyTest
 {
+    /**
+     * @return string
+     */
     protected function getTestedNamespace()
     {
         return $this->getRootNamespace();
     }
 
+    /**
+     * @return string
+     */
     protected function getRootNamespace()
     {
         return str_replace('\Tests', '', __NAMESPACE__);
