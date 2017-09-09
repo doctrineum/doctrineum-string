@@ -8,8 +8,8 @@ class StringEnumType extends ScalarEnumType
 
     /**
      * Its not directly used this library - the exactly same value is generated and used by
-     * @see \Doctrineum\String\SelfTypedEnum::getTypeName
      *
+     * @see \Doctrineum\String\SelfTypedEnum::getTypeName
      * This constant exists to follow Doctrine type conventions.
      */
     const STRING_ENUM = 'string_enum';
@@ -17,7 +17,7 @@ class StringEnumType extends ScalarEnumType
     /**
      * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return self::STRING_ENUM;
     }

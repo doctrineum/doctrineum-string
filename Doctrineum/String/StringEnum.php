@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1); // on PHP 7+ are standard PHP methods strict to types of given parameters
+
 namespace Doctrineum\String;
 
 use Doctrineum\Scalar\ScalarEnum;
@@ -15,7 +17,7 @@ class StringEnum extends ScalarEnum implements StringInterface
      * @return string
      * @throws \Doctrineum\String\Exceptions\UnexpectedValueToEnum
      */
-    protected static function convertToEnumFinalValue($enumValue)
+    protected static function convertToEnumFinalValue($enumValue): string
     {
         try {
             return ToString::toString($enumValue, true /* strict */);

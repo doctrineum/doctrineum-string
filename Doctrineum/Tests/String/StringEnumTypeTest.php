@@ -22,7 +22,7 @@ class StringEnumTypeTest extends AbstractSelfRegisteringTypeTest
     /**
      * @return \Mockery\MockInterface|AbstractPlatform
      */
-    private function createPlatform()
+    private function createPlatform(): AbstractPlatform
     {
         return $this->mockery(AbstractPlatform::class);
     }

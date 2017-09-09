@@ -8,7 +8,7 @@ class DoctrineumStringExceptionsHierarchyTest extends AbstractExceptionsHierarch
     /**
      * @return string
      */
-    protected function getTestedNamespace()
+    protected function getTestedNamespace(): string
     {
         return $this->getRootNamespace();
     }
@@ -16,7 +16,7 @@ class DoctrineumStringExceptionsHierarchyTest extends AbstractExceptionsHierarch
     /**
      * @return string
      */
-    protected function getRootNamespace()
+    protected function getRootNamespace(): string
     {
         return str_replace('\Tests', '', __NAMESPACE__);
     }
