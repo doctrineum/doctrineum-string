@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 namespace Doctrineum\Tests\String;
 
 use Granam\Tests\ExceptionsHierarchy\Exceptions\AbstractExceptionsHierarchyTest;

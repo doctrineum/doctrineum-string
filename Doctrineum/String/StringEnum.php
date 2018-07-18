@@ -26,4 +26,9 @@ class StringEnum extends ScalarEnum implements StringInterface
         }
     }
 
+    public function getValue(): string
+    {
+        return parent::getValue();
+    }
+
 }

@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 namespace Doctrineum\String;
 
 use Doctrineum\Scalar\ScalarEnumType;
@@ -12,7 +14,7 @@ class StringEnumType extends ScalarEnumType
      * @see \Doctrineum\String\SelfTypedEnum::getTypeName
      * This constant exists to follow Doctrine type conventions.
      */
-    const STRING_ENUM = 'string_enum';
+    public const STRING_ENUM = 'string_enum';
 
     /**
      * @return string
