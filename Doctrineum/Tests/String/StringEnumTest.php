@@ -22,7 +22,7 @@ class StringEnumTest extends TestCase
 
     /**
      * @test
-     * @expectedException \Doctrineum\String\Exceptions\UnexpectedValueToEnum
+     * @expectedException \Granam\StringEnum\Exceptions\WrongValueForStringEnum
      * @expectedExceptionMessageRegExp ~got NULL$~
      */
     public function I_can_not_use_null()

@@ -1,34 +1,12 @@
 <?php
-declare(strict_types=1); // on PHP 7+ are standard PHP methods strict to types of given parameters
+declare(strict_types=1);
 
 namespace Doctrineum\String;
-
-use Doctrineum\Scalar\ScalarEnum;
-use Granam\Scalar\Tools\ToString;
-use Granam\String\StringInterface;
 
 /**
  * @method static StringEnum getEnum($value)
  */
-class StringEnum extends ScalarEnum implements StringInterface
+class StringEnum extends \Granam\StringEnum\StringEnum
 {
-    /**
-     * @param bool|float|int|string|object $enumValue
-     * @return string
-     * @throws \Doctrineum\String\Exceptions\UnexpectedValueToEnum
-     */
-    protected static function convertToEnumFinalValue($enumValue): string
-    {
-        try {
-            return ToString::toString($enumValue, true /* strict */);
-        } catch (\Granam\Scalar\Tools\Exceptions\WrongParameterType $exception) {
-            throw new Exceptions\UnexpectedValueToEnum($exception->getMessage(), $exception->getCode(), $exception);
-        }
-    }
-
-    public function getValue(): string
-    {
-        return parent::getValue();
-    }
 
 }
